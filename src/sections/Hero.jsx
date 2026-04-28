@@ -25,7 +25,7 @@ export default function Hero({ mode = 'dark' }) {
           <button data-scroll="#projects" style={buttonStyle} aria-label="Jump to projects">Explore Projects</button>
           <a href="https://github.com/01Freebird10" target="_blank" rel="noreferrer" style={buttonOutline} aria-label="Open GitHub profile in new tab">GitHub ↗</a>
           <a href="https://leetcode.com/u/Iniyan_072/" target="_blank" rel="noreferrer" style={buttonOutline} aria-label="Open LeetCode profile in new tab">LeetCode ↗</a>
-          <a href="https://www.linkedin.com/in/iniyan-sk" target="_blank" rel="noreferrer" style={buttonOutline} aria-label="Open LinkedIn profile">LinkedIn ↗</a>
+          <a href="https://www.linkedin.com/in/iniyan-sk-2b7630294" target="_blank" rel="noreferrer" style={buttonOutline} aria-label="Open LinkedIn profile">LinkedIn ↗</a>
           <a href="/resume.pdf" download style={buttonStyle} aria-label="Download Resume PDF">Download Resume</a>
         </div>
       </motion.div>
