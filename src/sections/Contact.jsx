@@ -11,7 +11,7 @@ export default function Contact() {
         <ContactCard label="Phone" value="8825722724" href="tel:+918825722724" />
         <ContactCard label="GitHub" value="01Freebird10" href="https://github.com/01Freebird10" />
         <ContactCard label="LeetCode" value="Iniyan_072" href="https://leetcode.com/u/Iniyan_072/" />
-        <ContactCard label="LinkedIn" value="linkedin.com/in/iniyan-sk-2b7630294" href="https://www.linkedin.com/in/iniyan-sk-2b7630294" />
+        <ContactCard label="LinkedIn" value="linkedin.com/in/iniyan-sk-2b7630294" href="https://www.linkedin.com/in/iniyan-sk-2b7630294/" />
         <ContactCard label="Location" value="Coimbatore, India" />
       </div>
       <ContactForm />
