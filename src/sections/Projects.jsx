@@ -24,7 +24,7 @@ const projects = [
     title:'Payroll System',
     stack:'Python',
     description:'Company-based employee & office maintenance system with automated payroll logic.',
-    link:'#'
+    link:'https://github.com/01Freebird10/payroll'
   }
 ];
 
