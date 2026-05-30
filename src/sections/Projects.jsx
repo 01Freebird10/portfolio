@@ -9,7 +9,7 @@ const projects = [
     link:'#'
   },
   {
-    title:'Arcade App',
+    title:'Arcade',
     stack:'React & Node.js',
     description:'An interactive gaming arcade featuring high-performance web games, multiplayer support, and real-time leaderboards.',
     link:'https://bottling-union-selective.ngrok-free.dev'
@@ -18,7 +18,7 @@ const projects = [
     title:'ChatIt',
     stack:'React & Socket.io',
     description:'A secure real-time messaging application with instant delivery, active status tracking, and private chat rooms.',
-    link:'https://chatiti.iniyansk.dev'
+    link:'https://chatit.iniyansk.dev'
   },
   {
     title:'Payroll System',
