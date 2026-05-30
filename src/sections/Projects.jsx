@@ -9,21 +9,21 @@ const projects = [
     link:'#'
   },
   {
-    title:'Lendify',
-    stack:'MERN Stack',
-    description:'Peer-to-peer lending & borrowing platform with secure transactions and repayment tracking.',
-    link:'#'
+    title:'Arcade App',
+    stack:'React & Node.js',
+    description:'An interactive gaming arcade featuring high-performance web games, multiplayer support, and real-time leaderboards.',
+    link:'https://bottling-union-selective.ngrok-free.dev'
+  },
+  {
+    title:'ChatIt',
+    stack:'React & Socket.io',
+    description:'A secure real-time messaging application with instant delivery, active status tracking, and private chat rooms.',
+    link:'https://chatiti.iniyansk.dev'
   },
   {
     title:'Payroll System',
     stack:'Python',
     description:'Company-based employee & office maintenance system with automated payroll logic.',
-    link:'#'
-  },
-  {
-    title:'Mini Projects',
-    stack:'React',
-    description:'Weather app (real-time API), typing speed test, currency converter utilities.',
     link:'#'
   }
 ];
@@ -90,7 +90,7 @@ export default function Projects() {
                 <h3 style={{ margin:'0 0 6px' }}>{p.title}</h3>
                 <small style={{ opacity:0.7 }}>{p.stack}</small>
                 <p style={{ fontSize:14, lineHeight:1.5 }}>{p.description}</p>
-                <a href={p.link} style={{ position:'absolute', left:22, bottom:18, fontWeight:600 }}>Details ↗</a>
+                <a href={p.link} target="_blank" rel="noreferrer" style={{ position:'absolute', left:22, bottom:18, fontWeight:600 }}>Details ↗</a>
                 <div style={{ position:'absolute', right:-40, top:-40, width:140, height:140, background:'linear-gradient(135deg,#4d9fff,#9b59ff)', opacity:0.2, transform:'rotate(25deg)' }} />
               </article>
             ))}
