@@ -6,25 +6,29 @@ const projects = [
     title:'Documentter',
     stack:'React, Express & Gemini AI',
     description:'An intelligent codebase auditing and documentation SaaS platform that analyzes repository structures, generates compiled architectural blueprints, and enables RAG-driven AI chats.',
-    link:'https://documentter.iniyansk.dev/'
+    link:'https://documentter.iniyansk.dev/',
+    image:'/documentter_mockup.png'
   },
   {
     title:'Arcade',
     stack:'React & Node.js',
     description:'An interactive gaming arcade featuring high-performance web games, multiplayer support, and real-time leaderboards.',
-    link:'https://bottling-union-selective.ngrok-free.dev'
+    link:'https://bottling-union-selective.ngrok-free.dev',
+    image:'/arcade_mockup.png'
   },
   {
     title:'ChatIt',
     stack:'React & Socket.io',
     description:'A secure real-time messaging application with instant delivery, active status tracking, and private chat rooms.',
-    link:'https://chatit.iniyansk.dev'
+    link:'https://chatit.iniyansk.dev',
+    image:'/chatit_mockup.png'
   },
   {
     title:'Payroll System',
     stack:'React & Python',
     description:'Company-based employee & office maintenance system with automated payroll logic.',
-    link:'https://payroll-one-psi.vercel.app/'
+    link:'https://payroll-one-psi.vercel.app/',
+    image:'/payroll_mockup.png'
   }
 ];
 
@@ -86,12 +90,15 @@ export default function Projects() {
             style={{ display:'grid', gridTemplateColumns:`repeat(${projects.length}, 1fr)`, gap:'26px', width:`${(projects.length / cols) * 100}%` }}>
             {projects.map((p,i) => (
               <article key={p.title}
-                style={{ position:'relative', padding:'20px 22px 80px', borderRadius:'18px', background:'rgba(255,255,255,0.05)', backdropFilter:'blur(8px)', border:'1px solid rgba(255,255,255,0.1)', overflow:'hidden' }}>
-                <h3 style={{ margin:'0 0 6px' }}>{p.title}</h3>
-                <small style={{ opacity:0.7 }}>{p.stack}</small>
-                <p style={{ fontSize:14, lineHeight:1.5 }}>{p.description}</p>
-                <a href={p.link} target="_blank" rel="noreferrer" style={{ position:'absolute', left:22, bottom:18, fontWeight:600 }}>Details ↗</a>
-                <div style={{ position:'absolute', right:-40, top:-40, width:140, height:140, background:'linear-gradient(135deg,#4d9fff,#9b59ff)', opacity:0.2, transform:'rotate(25deg)' }} />
+                style={{ position:'relative', padding:'16px 16px 72px', borderRadius:'18px', background:'rgba(255,255,255,0.05)', backdropFilter:'blur(8px)', border:'1px solid rgba(255,255,255,0.1)', overflow:'hidden' }}>
+                <div style={{ width:'100%', height:'150px', borderRadius:'12px', overflow:'hidden', marginBottom:'16px', border:'1px solid rgba(255,255,255,0.08)' }}>
+                  <img src={p.image} alt={p.title} style={{ width:'100%', height:'100%', objectFit:'cover', transition:'transform 0.3s' }} className="project-card-image" />
+                </div>
+                <h3 style={{ margin:'0 0 6px', padding:'0 4px' }}>{p.title}</h3>
+                <small style={{ opacity:0.7, padding:'0 4px', display:'block', marginBottom:'8px' }}>{p.stack}</small>
+                <p style={{ fontSize:14, lineHeight:1.5, padding:'0 4px', margin:0 }}>{p.description}</p>
+                <a href={p.link} target="_blank" rel="noreferrer" style={{ position:'absolute', left:20, bottom:18, fontWeight:600 }}>Details ↗</a>
+                <div style={{ position:'absolute', right:-40, top:-40, width:140, height:140, background:'linear-gradient(135deg,#4d9fff,#9b59ff)', opacity:0.1, transform:'rotate(25deg)', pointerEvents:'none' }} />
               </article>
             ))}
           </motion.div>
