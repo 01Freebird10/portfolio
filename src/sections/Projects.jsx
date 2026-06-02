@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title:'Eatzz',
-    stack:'React Native',
-    description:'Food ordering & delivery app, user-centric ordering flow, state management and dynamic menus.',
-    link:'#'
+    title:'Documentter',
+    stack:'React, Express & Gemini AI',
+    description:'An intelligent codebase auditing and documentation SaaS platform that analyzes repository structures, generates compiled architectural blueprints, and enables RAG-driven AI chats.',
+    link:'https://documentter.iniyansk.dev/'
   },
   {
     title:'Arcade',
@@ -22,9 +22,9 @@ const projects = [
   },
   {
     title:'Payroll System',
-    stack:'Python',
+    stack:'React & Python',
     description:'Company-based employee & office maintenance system with automated payroll logic.',
-    link:'https://github.com/01Freebird10/payroll'
+    link:'https://payroll-one-psi.vercel.app/'
   }
 ];
 
