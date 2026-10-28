@@ -3,32 +3,32 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title:'Documentter',
-    stack:'React, Express & Gemini AI',
-    description:'An intelligent codebase auditing and documentation SaaS platform that analyzes repository structures, generates compiled architectural blueprints, and enables RAG-driven AI chats.',
-    link:'https://documentter.iniyansk.dev/',
-    image:'/documentter_mockup.png'
+    title: 'Documentter',
+    stack: 'React, Express & Gemini AI',
+    description: 'An intelligent codebase auditing and documentation SaaS platform that analyzes repository structures, generates compiled architectural blueprints, and enables RAG-driven AI chats.',
+    link: 'https://documentter.iniyansk.dev/',
+    image: '/documentter_mockup.png'
   },
   {
-    title:'Arcade',
-    stack:'React & Node.js',
-    description:'An interactive gaming arcade featuring high-performance web games, multiplayer support, and real-time leaderboards.',
-    link:'https://bottling-union-selective.ngrok-free.dev',
-    image:'/arcade_mockup.png'
+    title: 'Arcade',
+    stack: 'React & Node.js',
+    description: 'An interactive gaming arcade featuring high-performance web games, multiplayer support, and real-time leaderboards.',
+    link: 'https://acrade.iniyansk.dev/',
+    image: '/arcade_mockup.png'
   },
   {
-    title:'ChatIt',
-    stack:'React & Socket.io',
-    description:'A secure real-time messaging application with instant delivery, active status tracking, and private chat rooms.',
-    link:'https://chatit.iniyansk.dev',
-    image:'/chatit_mockup.png'
+    title: 'ChatIt',
+    stack: 'React & Socket.io',
+    description: 'A secure real-time messaging application with instant delivery, active status tracking, and private chat rooms.',
+    link: 'https://chatit.iniyansk.dev',
+    image: '/chatit_mockup.png'
   },
   {
-    title:'Payroll System',
-    stack:'React & Python',
-    description:'Company-based employee & office maintenance system with automated payroll logic.',
-    link:'https://payroll-one-psi.vercel.app/',
-    image:'/payroll_mockup.png'
+    title: 'Payroll System',
+    stack: 'React & Python',
+    description: 'Company-based employee & office maintenance system with automated payroll logic.',
+    link: 'https://payroll-one-psi.vercel.app/',
+    image: '/payroll_mockup.png'
   }
 ];
 
@@ -56,13 +56,13 @@ export default function Projects() {
     setIndex(i => clamp(i, 0, projects.length - cols));
   }, [cols]);
 
-  function onKeyDown(e){
+  function onKeyDown(e) {
     if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
     if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
   }
 
   const wheelLock = useRef(0);
-  function onWheel(e){
+  function onWheel(e) {
     e.preventDefault();
     const now = Date.now();
     if (now - wheelLock.current < 220) return;
@@ -72,33 +72,33 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section fade-in" aria-label="Projects section">
-      <h2 className="gradient-text" style={{ fontSize:'2.2rem', marginTop:0, display:'flex', alignItems:'center', gap:'16px' }}>
+      <h2 className="gradient-text" style={{ fontSize: '2.2rem', marginTop: 0, display: 'flex', alignItems: 'center', gap: '16px' }}>
         Projects
-        <span aria-live="polite" style={{ fontSize:'0.9rem', fontWeight:500, opacity:0.6 }}>({index + 1}-{Math.min(index + cols, projects.length)} / {projects.length})</span>
+        <span aria-live="polite" style={{ fontSize: '0.9rem', fontWeight: 500, opacity: 0.6 }}>({index + 1}-{Math.min(index + cols, projects.length)} / {projects.length})</span>
       </h2>
       <div role="region" aria-roledescription="carousel" aria-label="Projects carousel"
-           tabIndex={0} onKeyDown={onKeyDown} onWheel={onWheel}
-           style={{ position:'relative', marginTop:34, outline:'none' }}>
+        tabIndex={0} onKeyDown={onKeyDown} onWheel={onWheel}
+        style={{ position: 'relative', marginTop: 34, outline: 'none' }}>
         <button onClick={prev} disabled={index === 0} aria-label="Show previous projects"
           style={navBtnStyleLeft(index === 0, cols)}>&larr;</button>
         <button onClick={next} disabled={index >= projects.length - cols} aria-label="Show next projects"
           style={navBtnStyleRight(index >= projects.length - cols, cols)}>&rarr;</button>
-        <div ref={sliderRef} style={{ overflow:'hidden', width:'100%' }}>
+        <div ref={sliderRef} style={{ overflow: 'hidden', width: '100%' }}>
           <motion.div
             animate={{ x: `-${index * (100 / cols)}%` }}
-            transition={{ type:'spring', stiffness:110, damping:18 }}
-            style={{ display:'grid', gridTemplateColumns:`repeat(${projects.length}, 1fr)`, gap:'26px', width:`${(projects.length / cols) * 100}%` }}>
-            {projects.map((p,i) => (
+            transition={{ type: 'spring', stiffness: 110, damping: 18 }}
+            style={{ display: 'grid', gridTemplateColumns: `repeat(${projects.length}, 1fr)`, gap: '26px', width: `${(projects.length / cols) * 100}%` }}>
+            {projects.map((p, i) => (
               <article key={p.title}
-                style={{ position:'relative', padding:'16px 16px 72px', borderRadius:'18px', background:'rgba(255,255,255,0.05)', backdropFilter:'blur(8px)', border:'1px solid rgba(255,255,255,0.1)', overflow:'hidden' }}>
-                <div style={{ width:'100%', height:'150px', borderRadius:'12px', overflow:'hidden', marginBottom:'16px', border:'1px solid rgba(255,255,255,0.08)' }}>
-                  <img src={p.image} alt={p.title} style={{ width:'100%', height:'100%', objectFit:'cover', transition:'transform 0.3s' }} className="project-card-image" />
+                style={{ position: 'relative', padding: '16px 16px 72px', borderRadius: '18px', background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.1)', overflow: 'hidden' }}>
+                <div style={{ width: '100%', height: '150px', borderRadius: '12px', overflow: 'hidden', marginBottom: '16px', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <img src={p.image} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }} className="project-card-image" />
                 </div>
-                <h3 style={{ margin:'0 0 6px', padding:'0 4px' }}>{p.title}</h3>
-                <small style={{ opacity:0.7, padding:'0 4px', display:'block', marginBottom:'8px' }}>{p.stack}</small>
-                <p style={{ fontSize:14, lineHeight:1.5, padding:'0 4px', margin:0 }}>{p.description}</p>
-                <a href={p.link} target="_blank" rel="noreferrer" style={{ position:'absolute', left:20, bottom:18, fontWeight:600 }}>Details ↗</a>
-                <div style={{ position:'absolute', right:-40, top:-40, width:140, height:140, background:'linear-gradient(135deg,#4d9fff,#9b59ff)', opacity:0.1, transform:'rotate(25deg)', pointerEvents:'none' }} />
+                <h3 style={{ margin: '0 0 6px', padding: '0 4px' }}>{p.title}</h3>
+                <small style={{ opacity: 0.7, padding: '0 4px', display: 'block', marginBottom: '8px' }}>{p.stack}</small>
+                <p style={{ fontSize: 14, lineHeight: 1.5, padding: '0 4px', margin: 0 }}>{p.description}</p>
+                <a href={p.link} target="_blank" rel="noreferrer" style={{ position: 'absolute', left: 20, bottom: 18, fontWeight: 600 }}>Details ↗</a>
+                <div style={{ position: 'absolute', right: -40, top: -40, width: 140, height: 140, background: 'linear-gradient(135deg,#4d9fff,#9b59ff)', opacity: 0.1, transform: 'rotate(25deg)', pointerEvents: 'none' }} />
               </article>
             ))}
           </motion.div>
@@ -110,8 +110,8 @@ export default function Projects() {
 
 function navBtnBase(disabled) {
   return {
-    position:'absolute', top:'50%', transform:'translateY(-50%)', width:'44px', height:'44px', borderRadius:'12px', border:'1px solid rgba(255,255,255,0.18)', background: disabled ? 'rgba(255,255,255,0.08)' : 'linear-gradient(135deg,#4d9fff,#9b59ff)', color:'#fff', fontSize:'1.2rem', fontWeight:600, cursor: disabled ? 'not-allowed':'pointer', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 4px 16px -6px rgba(0,0,0,0.45)', transition:'opacity .3s', opacity: disabled ? 0.4 : 1
+    position: 'absolute', top: '50%', transform: 'translateY(-50%)', width: '44px', height: '44px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.18)', background: disabled ? 'rgba(255,255,255,0.08)' : 'linear-gradient(135deg,#4d9fff,#9b59ff)', color: '#fff', fontSize: '1.2rem', fontWeight: 600, cursor: disabled ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 16px -6px rgba(0,0,0,0.45)', transition: 'opacity .3s', opacity: disabled ? 0.4 : 1
   };
 }
-function navBtnStyleLeft(disabled, cols){ return { ...navBtnBase(disabled), left: cols < 3 ? '6px' : '-56px' }; }
-function navBtnStyleRight(disabled, cols){ return { ...navBtnBase(disabled), right: cols < 3 ? '6px' : '-56px' }; }
+function navBtnStyleLeft(disabled, cols) { return { ...navBtnBase(disabled), left: cols < 3 ? '6px' : '-56px' }; }
+function navBtnStyleRight(disabled, cols) { return { ...navBtnBase(disabled), right: cols < 3 ? '6px' : '-56px' }; }
