@@ -6,12 +6,12 @@ export default function Contact() {
     <section id="contact" className="section fade-in" aria-label="Contact section">
       <h2 className="gradient-text" style={{ fontSize:'2.2rem', marginTop:0 }}>Contact</h2>
       <p style={{ maxWidth:640 }}>Reach out for collaboration, opportunities, or tech discussions. Use the form or direct links below.</p>
-      <div style={{ marginTop:24, display:'grid', gap:'18px', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))' }}>
+      <div className="contact-grid" style={{ marginTop:24, display:'grid', gap:'18px', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,240px),1fr))' }}>
         <ContactCard label="Email" value="skiniyan44@gmail.com" href="mailto:skiniyan44@gmail.com" />
         <ContactCard label="Phone" value="8825722724" href="tel:+918825722724" />
         <ContactCard label="GitHub" value="01Freebird10" href="https://github.com/01Freebird10" />
         <ContactCard label="LeetCode" value="Iniyan_072" href="https://leetcode.com/u/Iniyan_072/" />
-        <ContactCard label="LinkedIn" value="linkedin.com/in/iniyan-sk-2b7630294" href="https://www.linkedin.com/in/iniyansk07" />
+        <ContactCard label="LinkedIn" value="linkedin.com/in/iniyansk07" href="https://www.linkedin.com/in/iniyansk07/" />
         <ContactCard label="Location" value="Coimbatore, India" />
       </div>
       <ContactForm />
@@ -83,13 +83,13 @@ const altLinkStyle = { padding:'12px 20px', borderRadius:'24px', fontWeight:600,
 
 function ContactCard({ label, value, href }) {
   const body = (
-    <div style={{ display:'flex', flexDirection:'column', gap:6 }}>
+    <div className="contact-card-content" style={{ display:'flex', flexDirection:'column', gap:6 }}>
       <span style={{ fontSize:12, opacity:0.7 }}>{label}</span>
-      <strong>{value}</strong>
+      <strong className="contact-card-value">{value}</strong>
     </div>
   );
   return (
-    <div style={{ background:'rgba(255,255,255,0.05)', padding:'18px 20px', borderRadius:'14px', border:'1px solid rgba(255,255,255,0.09)', backdropFilter:'blur(5px)' }}>
+    <div className="contact-card" style={{ background:'rgba(255,255,255,0.05)', padding:'18px 20px', borderRadius:'14px', border:'1px solid rgba(255,255,255,0.09)', backdropFilter:'blur(5px)' }}>
       {href ? <a href={href} style={{ color:'inherit', textDecoration:'none' }}>{body}</a> : body}
     </div>
   );
