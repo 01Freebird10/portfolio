@@ -54,7 +54,7 @@ Output in `dist/`.
 
 ## Domain
 
-You can configure a custom `.com` domain in Netlify domain settings after deployment (purchase via registrar, add DNS records).
+The production site uses `iniyansk.dev`. Configure it in Netlify's domain settings after deployment, then point the registrar's DNS records to the Netlify site.
 
 ## TODO Ideas
 
