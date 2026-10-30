@@ -1,6 +1,6 @@
 # Iniyan S K Portfolio
 
-A professional single-page portfolio for **Iniyan S K** (AIML Engineer & Full Stack Developer) featuring a space-themed neon gradient design, animated hero, typewriter text, parallax background, skill bars, project cards, and responsive layout.
+A professional single-page portfolio for **Iniyan S K** (Full Stack Developer) featuring a space-themed neon gradient design, animated hero, typewriter text, parallax background, skill bars, project cards, and responsive layout.
 
 ## Tech Stack
 

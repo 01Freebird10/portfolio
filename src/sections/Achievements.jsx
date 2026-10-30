@@ -3,7 +3,7 @@ import React from 'react';
 const achievements = [
   { label: 'LeetCode Problems Solved', value: '350+' },
   { label: 'Production Apps Delivered', value: '3 Major' },
-  { label: 'Tech Stack Breadth', value: 'Web + Mobile + AIML' },
+  { label: 'Tech Stack Breadth', value: 'Web + Mobile + Cloud' },
   { label: 'Performance Focus', value: 'Optimized React & Node' },
 ];
 

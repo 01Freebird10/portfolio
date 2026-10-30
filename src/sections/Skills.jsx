@@ -10,6 +10,8 @@ const skillData = [
   { name: 'SQL' },
   { name: 'Express' },
   { name: 'React Native' },
+  { name: 'WebSockets' },
+  { name: 'Vercel' },
 ];
 
 export default function Skills() {

@@ -19,7 +19,7 @@ export default function Hero({ mode = 'dark' }) {
         <h1 className="gradient-text" style={{ fontSize: 'clamp(2.4rem,6vw,4.2rem)', margin: '0 0 20px' }}>Hi, I’m Iniyan S K</h1>
         <h2 style={{ fontSize: 'clamp(1.2rem,3vw,2rem)', fontWeight: 500, margin: '0 0 32px' }}>{text}<span style={{ opacity:0.6 }}>{'|'}</span></h2>
         <p style={{ maxWidth: 620, lineHeight: 1.5 }}>
-          AIML Engineer & Full Stack Developer (B.Tech AIML). I craft performant web & mobile experiences, explore data structures & algorithms, and deliver scalable backend systems.
+          Full Stack Developer. I craft performant web & mobile experiences, explore data structures & algorithms, and deliver scalable backend systems.
         </p>
         <div style={{ marginTop: 30, display:'flex', gap: '16px', flexWrap:'wrap' }}>
           <button data-scroll="#projects" style={buttonStyle} aria-label="Jump to projects">Explore Projects</button>
@@ -53,9 +53,9 @@ function TopicCards() {
   const topics = [
     { t:'Web Apps', d:'Full-stack builds with performance focus.' },
     { t:'Mobile', d:'Cross-platform React Native solutions.' },
-    { t:'AIML', d:'Model integration & intelligent features.' },
+    { t:'Next.js', d:'Modern full-stack web applications.' },
     { t:'DSA', d:'Problem solving in Python & Java.' },
-    { t:'Cloud', d:'Deploy & optimize services.' },
+    { t:'Vercel', d:'Deploy & optimize production apps.' },
     { t:'UI/UX', d:'Accessible, animated interfaces.' },
   ];
   return (

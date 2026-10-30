@@ -2,9 +2,9 @@ import React from 'react';
 
 const timeline = [
   { year: '2026', title: 'React Native Mobile App Development', details: 'Designed and developed high-performance cross-platform mobile applications, focusing on seamless user interfaces, state management, and native module integration.' },
-  { year: '2025', title: 'AIML Engineer / Full Stack Projects', details: 'Built mobile (React Native) and MERN apps: Eatzz food delivery, Lendify P2P lending, payroll automation.' },
+  { year: '2025', title: 'Full Stack Project Development', details: 'Built mobile (React Native) and MERN apps: Eatzz food delivery, Lendify P2P lending, and payroll automation.' },
   { year: '2024', title: 'Advanced DSA Practice', details: 'LeetCode daily problem solving sharpening algorithms & data structures.' },
-  { year: '2023', title: 'B.Tech AIML Studies', details: 'Foundations in Machine Learning, Python systems, backend integration.' }
+  { year: '2023', title: 'B.Tech Computer Science Studies', details: 'Foundations in programming, Python systems, web development, and backend integration.' }
 ];
 
 export default function Experience() {
